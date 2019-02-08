@@ -1,0 +1,15 @@
+{
+  "name": "reddit-reader",
+  "version": "1.0.0",
+  "description": "Reading out reddit api",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc index.ts && node index.js"
+  },
+  "author": "fritzvd",
+  "license": "ISC",
+  "dependencies": {
+    "@types/superagent": "^3.5.7",
+    "superagent": "^3.8.2"
+  }
+}
