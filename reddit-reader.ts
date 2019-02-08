@@ -1,4 +1,4 @@
-import superagent from 'superagent'
+import * as superagent from 'superagent'
 
 interface TopicInfo {
   title:string,
@@ -20,7 +20,7 @@ export default class RedditReader {
   }
 
   getDataFromReddit(subreddit:string) {
-    superagent(`https://www.reddit.com/r/${subreddit}/.json`)
+    superagent.get(`https://www.reddit.com/r/${subreddit}/.json`)
       .then((response) => {
         this.redditData = response.body.data.children
         this.print()
